@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Pro Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="brand">
+                <h1>TaskPro</h1>
+                <button id="theme-toggle" class="theme-btn">🌙</button>
+            </div>
+            
+            <div class="stats-card">
+                <div class="stat-item">
+                    <span class="label">Total Tasks</span>
+                    <span id="total-count" class="value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">Completed</span>
+                    <span id="completed-count" class="value">0</span>
+                </div>
+                <div class="progress-container">
+                    <div id="progress-bar" class="progress-fill"></div>
+                </div>
+            </div>
+
+            <nav class="filters">
+                <h3>Quick Search</h3>
+                <input type="text" id="search-bar" class="search-box" placeholder="Filter by name...">
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h2>My Dashboard</h2>
+                <div class="input-area">
+                    <input type="text" id="task-input" placeholder="What needs to be done?">
+                    <select id="priority-select">
+                        <option value="1">Low</option>
+                        <option value="2" selected>Medium</option>
+                        <option value="3">High</option>
+                    </select>
+                    <button id="add-btn" disabled>Add Task</button>
+                </div>
+            </header>
+
+            <ul id="task-list"></ul>
+            <div id="empty-state" class="empty-state">No tasks found.</div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
